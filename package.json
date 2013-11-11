@@ -1,0 +1,42 @@
+{
+  "name": "VertuConstellation",
+  "description": "Compile static html for Vertu site from ejs templates",
+  "version": "0.5.0",
+  "homepage": "https://www.vertu.com",
+  "repository": {
+    "type": "git",
+    "url": "https://stash.akqa.net/scm/BERVER/ver-fe-constellation.git"
+    },
+  "private": true,
+  "author": {
+    "name": "Scott van Looy",
+    "email": "scott.vanlooy@akqa.com"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "ejs": "~0.8.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-ejs-static": "*",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt": "~0.4.1",
+    "grunt-rev": "~0.1.0",
+    "ejs": "~0.8.4",
+    "matchdep": "~0.1.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "connect-livereload": "~0.2.0",
+    "intern": "~1.2.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "without": {
+        "path_to_layout": "src/ejs/layouts/default.ejs"
+    },
+    "with": {
+        "path_to_layout": "src/ejs/layouts/default.ejs"
+    }
+}
