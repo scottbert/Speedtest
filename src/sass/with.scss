@@ -1,4 +1,5 @@
 @import 'icons';
+@import 'main';
 @for $i from 0 to length($icons) {
     .icon-#{$i} {
         background-image:inline-image('../images/#{nth($icons, $i + 1)}');

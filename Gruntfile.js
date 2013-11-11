@@ -31,6 +31,10 @@ module.exports = function(grunt) {
                 files: ['src/sass/**'],
                 tasks: ['compass']
             },
+            json: {
+                files: ['src/json/**'],
+                tasks: ['build']
+            },
             ejs: {
                 files: ['src/ejs/**'],
                 tasks: ['ejs_static']
@@ -74,12 +78,6 @@ module.exports = function(grunt) {
                         cwd:'src/',
                         src:['images/**'],
                         dest:'<%= location.app %>/<%= location.staticPath %>/'
-                    },
-                    {
-                        expand:true,
-                        cwd:'src/html',
-                        src:['*.html'],
-                        dest:'<%= location.app %>/'
                     }
                 ]
             }

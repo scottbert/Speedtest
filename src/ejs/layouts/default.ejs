@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%if (file_name !== 'index') {%>
     <script type="text/javascript">
         var f = new Date();
         window.addEventListener('load', function () {
             document.getElementById('timer').innerHTML = 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
         }, true);
     </script>
-    <title>No Base64 Encoding</title>
+    <%}%>
+    <title><%if (file_name === 'without') {%>No <%}%>Base64 Encoding</title>
     <%if (file_name === 'without') {%>
         <link rel="stylesheet" href="static/css/without.css">
-    <%} else {%>
+    <%} else if (file_name === 'with') {%>
         <link rel="stylesheet" href="static/css/with.css">
+    <%} else {%>
+        <link rel="stylesheet" href="static/css/styles.css">
     <%}%>
 </head>
     <body>
-        <h1>Speed? Small images <%=file_name%> base64 encoding into the CSS.</h1>
-        <% include ../pages/icons%>
+        <%if (file_name === 'index') {%>
+            <h1>Speed? Demonstrating Base64 encoding in CSS.</h1>
+        <%} else {%>
+            <h1>Speed? Small images <%=file_name%> base64 encoding inserted into the CSS.</h1>
+        <%}%>
+        <%if (file_name === 'index') {%>
+            <a href="without.html">Normal CSS with background images.</a><br />
+            <a href="with.html">CSS with Base64 encoded background image URIs included inline.</a>
+        <%} else { %>
+            <% include ../pages/icons%>
+        <%}%>
         <div id="timer"></div>
     </body>
 </html>

@@ -1,4 +1,7 @@
-{
+{   
+    "index": {
+        "path_to_layout": "src/ejs/layouts/default.ejs"
+    },
     "without": {
         "path_to_layout": "src/ejs/layouts/default.ejs"
     },
