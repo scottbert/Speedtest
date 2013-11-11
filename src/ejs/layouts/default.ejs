@@ -31,9 +31,11 @@
             <% include ../pages/icons%>
         <%}%>
         <div id="timer">
-            <script>
+            <%if (file_name !== 'index') {%>
+            <script type="text/javascript">
                 document.write('DOM Ready in ' + ((new Date()).getTime() - f.getTime()) + 'ms<br />');
             </script>
+            <%}%>
         </div>
     </body>
 </html>
