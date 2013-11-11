@@ -5,7 +5,7 @@
     <script type="text/javascript">
         var f = new Date();
         window.addEventListener('load', function () {
-            document.getElementById('timer').innerHTML = 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
+            document.getElementById('timer').innerHTML += 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
         }, true);
     </script>
     <%}%>
@@ -30,6 +30,10 @@
         <%} else { %>
             <% include ../pages/icons%>
         <%}%>
-        <div id="timer"></div>
+        <div id="timer">
+            <script>
+                document.write('DOM Ready in ' + ((new Date()).getTime() - f.getTime()) + 'ms<br />');
+            </script>
+        </div>
     </body>
 </html>
