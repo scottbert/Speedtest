@@ -19,6 +19,4 @@ Put the contents on a remote server and speed test. Preferably with gzip enabled
 
 Or check my examples:
 
-http://03sq.net/akqa/base64/without.html
-
-http://03sq.net/akqa/base64/with.html
+http://03sq.net/akqa/base64/
