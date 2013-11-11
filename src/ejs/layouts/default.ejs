@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        var f = new Date();
+        window.addEventListener('load', function () {
+            document.getElementById('timer').innerHTML = 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
+        }, true);
+    </script>
     <title>No Base64 Encoding</title>
     <%if (file_name === 'without') {%>
-        <link rel="stylesheet" href="/static/css/without.css">
+        <link rel="stylesheet" href="static/css/without.css">
     <%} else {%>
-        <link rel="stylesheet" href="/static/css/with.css">
+        <link rel="stylesheet" href="static/css/with.css">
     <%}%>
 </head>
     <body>
+        <h1>Speed? Small images <%=file_name%> base64 encoding into the CSS.</h1>
         <% include ../pages/icons%>
+        <div id="timer"></div>
     </body>
 </html>
