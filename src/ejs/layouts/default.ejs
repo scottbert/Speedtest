@@ -4,9 +4,11 @@
     <%if (file_name !== 'index') {%>
     <script type="text/javascript">
         var f = new Date();
-        window.addEventListener('load', function () {
-            document.getElementById('timer').innerHTML += 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
-        }, true);
+        if (window.location.hash.indexOf('metric') !== -1) {
+            window.addEventListener('load', function () {
+                document.getElementById('timer').innerHTML += 'Page load complete in ' + ((new Date()).getTime() - f.getTime()) + 'ms';
+            }, true);
+        }
     </script>
     <%}%>
     <title><%if (file_name === 'without') {%>No <%}%>Base64 Encoding</title>
@@ -33,7 +35,9 @@
         <div id="timer">
             <%if (file_name !== 'index') {%>
             <script type="text/javascript">
-                document.write('DOM Ready in ' + ((new Date()).getTime() - f.getTime()) + 'ms<br />');
+                if (window.location.hash.indexOf('metric') !== -1) {
+                    document.write('DOM Ready in ' + ((new Date()).getTime() - f.getTime()) + 'ms<br />');
+                }
             </script>
             <%}%>
         </div>
